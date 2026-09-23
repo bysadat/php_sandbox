@@ -7,7 +7,7 @@
 </head>
 <body>
     <h1>Cryto Master Club!</h1>
-    <form action="convert.php">
+    <form action="convert.php" method="post">
         <label for="amount">Enter Amount:</label>
         <input id="amount" type="number" name="amount" required>
         <label for="crypto">Cryto Currency</label>
