@@ -1,6 +1,13 @@
 <?php
 
-    class cryptoConverter {
+
+    class Converter {}
+
+    interface CanConvert {
+        public function convert(float $value);
+    }
+
+    class CryptoConverter extends Converter {
       //Class can contain properties and methods.
 
       //Properties
@@ -24,4 +31,4 @@
 
     }
 
-    $c = new cryptoConverter(currencyCode:"BTC");
+    $c = new CryptoConverter(currencyCode:"BTC");
