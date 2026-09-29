@@ -3,15 +3,16 @@
 
     class Converter {}
 
-    interface CanConvert {
-        public function convert(float $value);
-    }
+    // interface CanConvert {
+    //     public function convert(float $value);
+    // }
 
     class CryptoConverter extends Converter {
       //Class can contain properties and methods.
 
       //Properties
         public  string $currencyCode;
+
 
 
       // Constructor Function
@@ -21,9 +22,16 @@
         }
 
       //Methods 
+      
 
-        public function convert(float $value){
+        public function convert(float $value): float{
+          $code = $this->currencyCode;
+          $url = "https://cex.io/api/ticker/$code/USD";
+          $JSON = file_get_contents($url);
+          echo ('JSON Response: $JSON');
+         
 
+          return 0;
         }
 
 
